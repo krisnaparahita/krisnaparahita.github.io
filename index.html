@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Krisna Parahita — product and technology executive with 12+ years building fintech platforms, AI-powered banking infrastructure, and embedded finance ecosystems across Indonesia."/>
+<title>Krisna Parahita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --paper:   #faf9f6;
+  --paper-2: #f2f0eb;
+  --ink:     #1c1a16;
+  --ink-2:   #4a4740;
+  --ink-3:   #8a8780;
+  --amber:   #b07d3a;
+  --amber-lt:#f5ecd8;
+  --rule:    #ddd9d0;
+  --white:   #ffffff;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.7;
+}
+a { color:inherit; text-decoration:none; }
+ul { list-style:none; }
+
+/* NAV */
+nav {
+  position:sticky; top:0; z-index:100;
+  background:rgba(250,249,246,0.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-inner {
+  max-width:980px; margin:0 auto;
+  padding:0 32px; height:52px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav-mark {
+  font-family:'Lora',serif;
+  font-size:1rem; font-weight:500;
+  letter-spacing:0.01em; color:var(--ink);
+}
+.nav-mark span { color:var(--amber); font-style:italic; }
+.nav-links { display:flex; gap:32px; }
+.nav-links a {
+  font-size:0.78rem; font-weight:500;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--ink-3); transition:color 0.15s;
+}
+.nav-links a:hover { color:var(--amber); }
+
+/* LAYOUT */
+.container { max-width:980px; margin:0 auto; padding:0 32px; }
+.col-2 { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+.col-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+
+/* RULE DIVIDER */
+.rule-label {
+  display:flex; align-items:center; gap:14px;
+  margin-bottom:40px;
+}
+.rule-label::before {
+  content:''; flex:1; height:1px; background:var(--rule);
+}
+.rule-label span {
+  font-size:0.72rem; font-weight:600;
+  letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-3); white-space:nowrap;
+}
+.rule-label::after {
+  content:''; flex:1; height:1px; background:var(--rule);
+}
+
+/* HERO */
+#hero { padding:80px 0 72px; }
+.hero-kicker {
+  font-size:0.78rem; font-weight:500;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--amber); margin-bottom:20px;
+}
+.hero-name {
+  font-family:'Lora',serif;
+  font-size:clamp(2.8rem,5.5vw,4.6rem);
+  font-weight:600; line-height:1.08;
+  letter-spacing:-0.01em;
+  color:var(--ink); margin-bottom:28px;
+}
+.hero-name em { font-style:italic; color:var(--amber); }
+.hero-layout { display:grid; grid-template-columns:1fr 340px; gap:64px; align-items:start; }
+.hero-bio {
+  font-size:1.05rem; font-weight:300;
+  color:var(--ink-2); line-height:1.8;
+  margin-bottom:32px;
+}
+.hero-cta { display:flex; gap:12px; flex-wrap:wrap; }
+.btn {
+  display:inline-block; padding:10px 24px;
+  font-size:0.82rem; font-weight:500;
+  letter-spacing:0.04em; border-radius:3px;
+  transition:all 0.15s; cursor:pointer; border:none;
+}
+.btn-amber {
+  background:var(--amber); color:var(--white);
+}
+.btn-amber:hover { background:#996930; }
+.btn-ghost {
+  background:transparent; color:var(--ink);
+  border:1px solid var(--rule);
+}
+.btn-ghost:hover { border-color:var(--amber); color:var(--amber); }
+
+/* PULL QUOTE — SIGNATURE ELEMENT */
+.pull-quote {
+  border-left:2px solid var(--amber);
+  padding:22px 24px;
+  background:var(--amber-lt);
+  border-radius:0;
+}
+.pull-quote blockquote {
+  font-family:'Lora',serif;
+  font-size:1.05rem; font-weight:400;
+  font-style:italic; line-height:1.65;
+  color:var(--ink); margin-bottom:14px;
+}
+.pull-quote cite {
+  font-size:0.75rem; font-weight:500;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--amber); font-style:normal;
+}
+.hero-meta-pills {
+  display:flex; flex-wrap:wrap; gap:8px;
+  margin-top:22px;
+}
+.meta-pill {
+  font-size:0.75rem; font-weight:400;
+  color:var(--ink-2); background:var(--paper-2);
+  border:1px solid var(--rule); border-radius:2px;
+  padding:4px 10px;
+}
+
+/* STATS */
+#stats { padding:48px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+.stats-row {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.stat-block {
+  padding:20px 28px;
+  border-right:1px solid var(--rule);
+}
+.stat-block:last-child { border-right:none; }
+.stat-num {
+  font-family:'Lora',serif;
+  font-size:2.2rem; font-weight:500;
+  color:var(--ink); line-height:1;
+  margin-bottom:4px;
+}
+.stat-num sup { font-size:1rem; vertical-align:super; color:var(--amber); }
+.stat-desc {
+  font-size:0.75rem; font-weight:500;
+  letter-spacing:0.04em; color:var(--ink-3);
+}
+
+/* SECTION */
+section { padding:72px 0; border-bottom:1px solid var(--rule); }
+section:last-of-type { border-bottom:none; }
+.section-head { margin-bottom:40px; }
+.section-head h2 {
+  font-family:'Lora',serif;
+  font-size:1.9rem; font-weight:500;
+  color:var(--ink); line-height:1.2;
+}
+.section-head p {
+  font-size:0.9rem; color:var(--ink-3);
+  margin-top:6px;
+}
+
+/* ACHIEVEMENT CARDS */
+.ach-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); }
+.ach-card {
+  background:var(--white); padding:28px 24px;
+}
+.ach-num {
+  font-family:'Lora',serif;
+  font-size:1.55rem; font-weight:500;
+  color:var(--amber); line-height:1;
+  margin-bottom:8px;
+}
+.ach-title {
+  font-size:0.88rem; font-weight:500;
+  color:var(--ink); margin-bottom:8px;
+  line-height:1.4;
+}
+.ach-body {
+  font-size:0.82rem; color:var(--ink-3);
+  line-height:1.65;
+}
+
+/* EXPERIENCE */
+.exp-entry { padding:32px 0; border-bottom:1px solid var(--rule); }
+.exp-entry:last-child { border-bottom:none; }
+.exp-top {
+  display:grid; grid-template-columns:1fr auto;
+  gap:16px; align-items:baseline; margin-bottom:4px;
+}
+.exp-role {
+  font-family:'Lora',serif;
+  font-size:1.1rem; font-weight:500; color:var(--ink);
+}
+.exp-period {
+  font-size:0.78rem; font-weight:500;
+  color:var(--ink-3); letter-spacing:0.04em; white-space:nowrap;
+}
+.exp-company {
+  font-size:0.82rem; font-weight:500;
+  color:var(--amber); margin-bottom:14px;
+  letter-spacing:0.02em;
+}
+.exp-bullets { padding-left:0; }
+.exp-bullets li {
+  font-size:0.85rem; color:var(--ink-2);
+  padding-left:16px; position:relative;
+  margin-bottom:5px; line-height:1.6;
+}
+.exp-bullets li::before {
+  content:''; position:absolute; left:0;
+  top:9px; width:5px; height:1px;
+  background:var(--amber);
+}
+.early-block {
+  background:var(--paper-2); border:1px solid var(--rule);
+  border-radius:3px; padding:20px 22px; margin-top:4px;
+}
+.early-block p {
+  font-size:0.72rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:0.1em;
+  color:var(--ink-3); margin-bottom:10px;
+}
+.early-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.early-tag {
+  font-size:0.78rem; color:var(--ink-2);
+  background:var(--white); border:1px solid var(--rule);
+  border-radius:2px; padding:3px 10px;
+}
+
+/* SKILLS */
+.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.skill-group {
+  border-top:2px solid var(--amber); padding-top:14px;
+}
+.skill-group-name {
+  font-size:0.72rem; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:10px;
+}
+.skill-tags { display:flex; flex-wrap:wrap; gap:5px; }
+.skill-tag {
+  font-size:0.78rem; color:var(--ink-2);
+  background:var(--paper-2); border:1px solid var(--rule);
+  border-radius:2px; padding:3px 9px;
+}
+
+/* EDUCATION */
+.edu-entry {
+  display:grid; grid-template-columns:auto 1fr;
+  gap:20px; align-items:start;
+  padding:24px 0; border-bottom:1px solid var(--rule);
+}
+.edu-entry:last-child { border-bottom:none; }
+.edu-year {
+  font-family:'Lora',serif;
+  font-size:0.78rem; font-style:italic;
+  color:var(--ink-3); white-space:nowrap; padding-top:3px;
+}
+.edu-degree {
+  font-family:'Lora',serif;
+  font-size:1.05rem; font-weight:500; color:var(--ink);
+  margin-bottom:2px;
+}
+.edu-school { font-size:0.85rem; color:var(--amber); font-weight:500; margin-bottom:4px; }
+.edu-note { font-size:0.8rem; color:var(--ink-3); }
+.edu-badge {
+  display:inline-block; margin-top:6px;
+  font-size:0.7rem; font-weight:600;
+  letter-spacing:0.06em; text-transform:uppercase;
+  color:#633806; background:#FAEEDA;
+  border:1px solid #EF9F27; border-radius:2px;
+  padding:2px 8px;
+}
+
+/* AWARDS & SPEAKING */
+.cred-cols { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+.cred-group { }
+.cred-group-title {
+  font-size:0.72rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:0.1em;
+  color:var(--ink-3); margin-bottom:14px;
+  padding-bottom:10px; border-bottom:1px solid var(--rule);
+}
+.cred-item {
+  display:flex; gap:10px;
+  font-size:0.83rem; color:var(--ink-2);
+  margin-bottom:9px; line-height:1.5; align-items:flex-start;
+}
+.cred-mark {
+  width:1px; height:auto; background:var(--amber);
+  flex-shrink:0; margin-top:5px; align-self:stretch;
+  min-height:14px;
+}
+
+/* CONTACT FOOTER */
+#contact { background:var(--ink); border-bottom:none; }
+#contact .container { padding-top:64px; padding-bottom:64px; }
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:64px;
+  align-items:start;
+}
+.contact-left h2 {
+  font-family:'Lora',serif;
+  font-size:2rem; font-weight:500;
+  color:var(--white); line-height:1.2; margin-bottom:14px;
+}
+.contact-left h2 em { font-style:italic; color:#d4a05c; }
+.contact-left p {
+  font-size:0.88rem; font-weight:300;
+  color:rgba(255,255,255,0.5); line-height:1.7; max-width:340px;
+}
+.contact-links { display:flex; flex-direction:column; gap:14px; padding-top:4px; }
+.contact-link {
+  display:flex; align-items:center; gap:10px;
+  font-size:0.85rem; font-weight:400;
+  color:rgba(255,255,255,0.6); transition:color 0.15s;
+}
+.contact-link:hover { color:var(--white); }
+.contact-link-label {
+  font-size:0.68rem; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:rgba(255,255,255,0.25); display:block; margin-bottom:1px;
+}
+.contact-rule { height:1px; background:rgba(255,255,255,0.08); margin:40px 0 20px; }
+.footer-line {
+  font-size:0.75rem; color:rgba(255,255,255,0.2);
+  letter-spacing:0.04em;
+}
+
+/* RESPONSIVE */
+@media(max-width:760px){
+  .nav-links { display:none; }
+  .hero-layout { grid-template-columns:1fr; gap:40px; }
+  .stats-row { grid-template-columns:1fr 1fr; }
+  .stat-block:nth-child(2){ border-right:none; }
+  .stat-block:nth-child(3){ border-right:1px solid var(--rule); }
+  .ach-grid { grid-template-columns:1fr; }
+  .col-2,.col-3,.skills-grid,.cred-cols,.contact-grid { grid-template-columns:1fr; gap:24px; }
+  .exp-top { grid-template-columns:1fr; gap:2px; }
+}
+@media(prefers-reduced-motion:reduce){ *{ transition:none!important; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-mark">Krisna <em>Parahita</em></span>
+    <div class="nav-links">
+      <a href="#highlights">Highlights</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="border-bottom:1px solid var(--rule); padding-bottom:0;">
+  <div class="container">
+    <p class="hero-kicker">Jakarta, Indonesia &nbsp;·&nbsp; Product &amp; Technology Executive</p>
+    <h1 class="hero-name">Krisna<br><em>Parahita</em></h1>
+    <div class="hero-layout">
+      <div>
+        <p class="hero-bio">
+          Twelve years building fintech platforms from the ground up — lending infrastructure, AI-powered banking, embedded finance, and the data systems underneath them all. Led product and technology at Indonesia's largest e-wallet. Now pursuing an MSc in Artificial Intelligence while staying close to the problems that matter.
+        </p>
+        <div class="hero-cta">
+          <a href="https://www.linkedin.com/in/krisna-parahita/" target="_blank" rel="noopener" class="btn btn-amber">LinkedIn</a>
+          <a href="https://www.instagram.com/maskrisnaparahita/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+        </div>
+        <div class="hero-meta-pills">
+          <span class="meta-pill">Jakarta, Indonesia</span>
+          <span class="meta-pill">IELTS 7.0</span>
+          <span class="meta-pill">PSM I</span>
+          <span class="meta-pill">MSc AI (ongoing)</span>
+        </div>
+      </div>
+      <div>
+        <div class="pull-quote">
+          <blockquote>"The most important product decisions aren't about features — they're about which problems are worth solving in the first place."</blockquote>
+          <cite>— On building at scale</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-block">
+        <div class="stat-num">12<sup>+</sup></div>
+        <div class="stat-desc">Years in tech &amp; product</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">12M<sup>+</sup></div>
+        <div class="stat-desc">Verified users scaled</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">60<sup>%</sup></div>
+        <div class="stat-desc">Infra cost cut as acting CTO</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">400K</div>
+        <div class="stat-desc">SME borrowers in 2 months</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="container">
+    <div class="rule-label"><span>Key highlights</span></div>
+    <div class="ach-grid">
+      <div class="ach-card">
+        <div class="ach-num">$1M+ · 400K</div>
+        <div class="ach-title">Lending platform from zero</div>
+        <div class="ach-body">Built LinkAja's core lending product end-to-end using alternate credit scoring for telco retailers. Acquired 400K SME borrowers and disbursed over USD 1 million within 2 months of launch.</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">60% ↓ cost · 30% ↑ revenue</div>
+        <div class="ach-title">Infrastructure turnaround as acting CTO</div>
+        <div class="ach-body">Cut cloud infrastructure costs by 60% and grew annual revenue 30% YoY by identifying high-performing products and closing low-ROI workloads — in a 3-month acting CTO tenure.</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">90% efficiency gain</div>
+        <div class="ach-title">Agentic BI platform</div>
+        <div class="ach-body">Delivered an internal self-service analytics tool powered by LLM-based agentic AI. Non-technical staff ran their own analyses, reducing data team dependency by 90%.</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">95% success rate</div>
+        <div class="ach-title">In-house eKYC AI</div>
+        <div class="ach-body">Built anti-spoofing and face-verification models for remote onboarding. Achieved 90% legitimacy and 95% onboarding success — even in low-connectivity rural markets.</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">12M+ · 6 licenses</div>
+        <div class="ach-title">Platform scale &amp; regulatory licensing</div>
+        <div class="ach-body">Scaled LinkAja to 12M+ verified users and trillions in GTV/month. Secured 6 regulatory licenses: E-Wallet, SNAP, QRIS, Cardless Withdrawal, Account Linked, and Remittance.</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">100K+ farmers · $5M+</div>
+        <div class="ach-title">Agri-fintech credit infrastructure</div>
+        <div class="ach-body">Built AI-enhanced credit scoring using telco and commodity data at TaniFund. Enabled 5× faster approvals, 10× faster disbursement, and grew to 1M+ retail investors.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="rule-label"><span>Professional experience</span></div>
+
+    <div class="exp-entry">
+      <div class="exp-top">
+        <span class="exp-role">Head of Product &amp; Data Platforms</span>
+        <span class="exp-period">Apr 2021 – Apr 2025</span>
+      </div>
+      <div class="exp-company">LinkAja — National e-wallet &amp; digital payment platform (SOE-backed)</div>
+      <ul class="exp-bullets">
+        <li>Built and launched core lending platform from zero; disbursed &gt;USD 1M, acquired 400K SME borrowers in 2 months</li>
+        <li>Owned end-to-end product roadmap: QRIS, Direct Debit, remittance, investment, and savings products</li>
+        <li>Led AI-powered systems: e-KYC with anti-spoofing, real-time credit scoring, and Fraud Detection System</li>
+        <li>Shipped internal BI platform powered by agentic AI; enabled 90% efficiency gains via LLM analytics</li>
+        <li>Served as acting CTO for 3 months — achieved 60% infra cost reduction and 30% YoY revenue growth</li>
+        <li>Scaled platform to 12M+ verified users, trillions in GTV/month, millions of active merchants</li>
+        <li>Secured 6 regulatory licenses including E-Wallet, SNAP, QRIS, Cardless Withdrawal, Account Linked, Remittance</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-top">
+        <span class="exp-role">Data Engineering Consultant</span>
+        <span class="exp-period">Jan 2021 – Jul 2021</span>
+      </div>
+      <div class="exp-company">World Bank (STC) — Advisory to Indonesia's Ministry of Finance</div>
+      <ul class="exp-bullets">
+        <li>Designed future architecture for the SIKD fiscal data system using MDM, data profiling, and analytics tooling</li>
+        <li>Delivered a CKAN-based data catalog improving national access to subnational fiscal data</li>
+        <li>Presented gap analysis and solutions to senior Ministry of Finance officials and policy stakeholders</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-top">
+        <span class="exp-role">Head of Technology / Senior PM</span>
+        <span class="exp-period">Apr 2020 – Apr 2021</span>
+      </div>
+      <div class="exp-company">TaniFund — Agri-fintech platform enabling farmer access to capital</div>
+      <ul class="exp-bullets">
+        <li>Built AI-enhanced alternative credit scoring using telco + commodity data; enabled loans to 100K+ farmers</li>
+        <li>Implemented AI/IoT-powered farm monitoring for project health and risk management</li>
+        <li>Enabled 5× faster credit approval and 10× faster disbursement via internal automation</li>
+        <li>Grew platform to 1M+ retail investors; disbursed &gt;USD 5M with low NPL</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-top">
+        <span class="exp-role">Founding Product Lead</span>
+        <span class="exp-period">Dec 2018 – Apr 2020</span>
+      </div>
+      <div class="exp-company">Spacestock — PropTech platform for property agents and buyers</div>
+      <ul class="exp-bullets">
+        <li>Led product and marketing; delivered 1M+ web sessions in 6 months with SEO/SEM under $10K</li>
+        <li>Built CRM and scheduling tools for hundreds of agents; optimized conversion and lead management</li>
+        <li>Scaled revenue to $50K+/month by month 3 post-launch; grew team from 1 to 15</li>
+      </ul>
+    </div>
+
+    <div class="exp-entry" style="padding-bottom:0;">
+      <div class="exp-top">
+        <span class="exp-role">Earlier Roles</span>
+        <span class="exp-period">Jul 2011 – Dec 2018</span>
+      </div>
+      <div class="exp-company">Senior to head-level roles across tech, e-commerce, and financial services</div>
+      <div class="early-block">
+        <p>Companies &amp; roles</p>
+        <div class="early-tags">
+          <span class="early-tag">Head of Product — Elevenia</span>
+          <span class="early-tag">Head of Trust &amp; Safety — Bukalapak</span>
+          <span class="early-tag">Senior Product Manager — OLX</span>
+          <span class="early-tag">Senior Product Owner — Midtrans</span>
+          <span class="early-tag">Project Manager — ANZ Bank</span>
+          <span class="early-tag">Senior Software Engineer — Kleepon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="rule-label"><span>Skills &amp; domain expertise</span></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-name">Cloud &amp; Infrastructure</div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Snowflake</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Data &amp; AI</div>
+        <div class="skill-tags">
+          <span class="skill-tag">BigQuery</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Looker</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">LLM / Agentic AI</span>
+          <span class="skill-tag">Credit scoring</span>
+          <span class="skill-tag">eKYC</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Product &amp; Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Mixpanel</span>
+          <span class="skill-tag">Hotjar</span>
+          <span class="skill-tag">Content Square</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Indonesia regulatory</div>
+        <div class="skill-tags">
+          <span class="skill-tag">OJK compliance</span>
+          <span class="skill-tag">Bank Indonesia</span>
+          <span class="skill-tag">QRIS · BI-FAST · SNAP</span>
+          <span class="skill-tag">Dukcapil eKYC</span>
+          <span class="skill-tag">Islamic finance</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Delivery</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Figjam</span>
+          <span class="skill-tag">PSM I</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="rule-label"><span>Education</span></div>
+    <div class="edu-entry">
+      <div class="edu-year">2025 –<br>2026</div>
+      <div>
+        <div class="edu-degree">Master of Science in Artificial Intelligence</div>
+        <div class="edu-school">Universität zu Lübeck, Germany</div>
+        <div class="edu-note">Positioning as a practitioner who never stopped learning — bridging 12+ years of hands-on platform delivery with formal AI research.</div>
+        <span class="edu-badge">In progress</span>
+      </div>
+    </div>
+    <div class="edu-entry">
+      <div class="edu-year">2007 –<br>2011</div>
+      <div>
+        <div class="edu-degree">Bachelor of Electrical Engineering</div>
+        <div class="edu-school">University of Brawijaya</div>
+        <div class="edu-note">Major in Software Engineering and Computer Informatics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS & SPEAKING -->
+<section id="credentials">
+  <div class="container">
+    <div class="rule-label"><span>Speaking &amp; recognition</span></div>
+    <div class="cred-cols">
+      <div class="cred-group">
+        <div class="cred-group-title">Speaking engagements</div>
+        <div class="cred-item"><div class="cred-mark"></div>Speaker — Fintech Forum</div>
+        <div class="cred-item"><div class="cred-mark"></div>Speaker — Digital Banking Summit</div>
+        <div class="cred-item"><div class="cred-mark"></div>Speaker — Indonesia Fintech Forum</div>
+        <div class="cred-item"><div class="cred-mark"></div>Panelist — Digital Banking Asia Summit Indonesia 2024, Jakarta</div>
+        <div class="cred-item"><div class="cred-mark"></div>Panelist — Tech &amp; Product Management Summit</div>
+        <div class="cred-item"><div class="cred-mark"></div>Mentor — AI, product ideation &amp; validation bootcamps</div>
+        <div class="cred-item"><div class="cred-mark"></div>Head of Technology — Indonesia E-commerce Association (idEA), 2019–2020</div>
+      </div>
+      <div class="cred-group">
+        <div class="cred-group-title">Awards &amp; certifications</div>
+        <div class="cred-item"><div class="cred-mark"></div>Excellence Performance Fintech (2023) — CNBC Indonesia</div>
+        <div class="cred-item"><div class="cred-mark"></div>Most Favorite E-Wallet App (2023) — BIFA</div>
+        <div class="cred-item"><div class="cred-mark"></div>Syariah Digital Customer Engagement (2023) — SWA</div>
+        <div class="cred-item"><div class="cred-mark"></div>"Achieving Together" Award (2022) — LinkAja</div>
+        <div class="cred-item"><div class="cred-mark"></div>Professional Scrum Master I (PSM I)</div>
+        <div class="cred-item"><div class="cred-mark"></div>IELTS Academic 7.0</div>
+        <div class="cred-item"><div class="cred-mark"></div>English (professional) · Indonesian (native)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2>Open to what's<br><em>worth building.</em></h2>
+        <p>Targeting senior technology and product leadership roles in fintech, digital banking, and AI-powered platforms — Indonesia, Southeast Asia, and beyond.</p>
+      </div>
+      <div class="contact-links">
+        <div>
+          <span class="contact-link-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/krisna-parahita/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/krisna-parahita</a>
+        </div>
+        <div>
+          <span class="contact-link-label">Instagram</span>
+          <a href="https://www.instagram.com/maskrisnaparahita/" target="_blank" rel="noopener" class="contact-link">@maskrisnaparahita</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-rule"></div>
+    <p class="footer-line">© 2025 Krisna Parahita &nbsp;·&nbsp; Jakarta, Indonesia &nbsp;·&nbsp; Hosted on GitHub Pages</p>
+  </div>
+</section>
+
+</body>
+</html>
